@@ -3,12 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DesignPatterns;
+package DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample;
 
 /**
  *
  * @author SERAP
  */
-class IIterator<T> {
-    
+/* Takim interface s?n?f? */
+public interface Takim {
+Iterator getIterator();
 }
+

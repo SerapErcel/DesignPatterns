@@ -6,7 +6,8 @@
 package DesignPatterns;
 
 import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
-import DesignPatterns.BehavioralDesignPatterns.Iterator.*;
+import DesignPatterns.BehavioralDesignPatterns.Iterator.EmployeeExample.*;
+import DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
 import DesignPatterns.CreationalDesignPatterns.Singleton.*;
 
@@ -47,7 +48,7 @@ public class Main {
         
         System.out.println(context.formula + " :> " + context.totalPoint);
          */
- /* ------------Iterator------------
+ /* ------------Iterator/Employee------------
         EmployeeListAggregate employeeListAggregate = new EmployeeListAggregate();
         Employee serap = new Employee(1, "Serap", "Erçel");
         Employee merve = new Employee(2, "Merve", "Bilgin");
@@ -65,8 +66,20 @@ public class Main {
             System.out.println(message);
         }
 
-    }
          */
- 
+  /* ------------Iterator/Football------------
+        final EfesPilsen efesPilsen = new EfesPilsen();
+        Iterator it = efesPilsen.getIterator();
+        while (it.hasNext()) {
+            final Oyuncu oyuncu = (Oyuncu) it.next();
+            System.out.println(oyuncu.getIsim());
+        }
+        final FenerBahce fenerBahce = new FenerBahce();
+        it = fenerBahce.getIterator();
+        while (it.hasNext()) {
+            final Oyuncu oyuncu = (Oyuncu) it.next();
+            System.out.println(oyuncu.getIsim());
+        }  
+*/
     }
 }
