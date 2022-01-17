@@ -21,10 +21,10 @@ public class Main {
      */
     public static void main(String[] args) {
 
-/* ------------Singleton------------
+        /* ------------Singleton------------
         Database firstInstanceRequest = Database.getInstance();
         Database secondInstanceRequest = Database.getInstance();
-*/
+         */
  /* ------------Factory------------
         ArabaFabrika bmw = new BmwFabrika();
         ArabaFabrika audi = new AudiFabrika();
@@ -37,7 +37,7 @@ public class Main {
             System.out.println(araba.getMarka() + " " + araba.getModel() + " , " 
             + araba.getBeygirGucu());
         }
- */
+         */
  /* ------------Interpreter------------
         Context context = new Context();
         context.formula ="GGML";
@@ -46,7 +46,7 @@ public class Main {
         jobManager.runExpression(context);
         
         System.out.println(context.formula + " :> " + context.totalPoint);
- */
+         */
  /* ------------Iterator------------
         EmployeeListAggregate employeeListAggregate = new EmployeeListAggregate();
         Employee serap = new Employee(1, "Serap", "Erçel");
@@ -66,6 +66,7 @@ public class Main {
         }
 
     }
- */
+         */
  
     }
+}
