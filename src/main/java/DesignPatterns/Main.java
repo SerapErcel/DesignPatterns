@@ -5,8 +5,9 @@
  */
 package DesignPatterns;
 
+import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
-import DesignPatterns.CreationalDesignPatterns.Singleton.Database;
+import DesignPatterns.CreationalDesignPatterns.Singleton.*;
 
 /**
  *
@@ -18,12 +19,13 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         /* ------Singleton------
         Database firstInstanceRequest = Database.getInstance();
         Database secondInstanceRequest = Database.getInstance();
          */
         
+        /* ------Factory------
         ArabaFabrika bmw = new BmwFabrika();
         ArabaFabrika audi = new AudiFabrika();
         
@@ -35,7 +37,17 @@ public class Main {
             System.out.println(araba.getMarka() + " " + araba.getModel() + " , " 
             + araba.getBeygirGucu());
         }
+        */
         
+        Context context = new Context();
+        context.formula ="GGML";
+        
+        JobManager jobManager = new JobManager();
+        jobManager.runExpression(context);
+        
+        System.out.println(context.formula + " :> " + context.totalPoint);
+ 
+ 
     }
 
 }
