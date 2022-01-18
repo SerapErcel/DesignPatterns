@@ -114,8 +114,10 @@ public class Main {
         AuthenticatableMaskOrderProxy orderableMask = new AuthenticatableMaskOrderProxy();
         orderableMask.createOrder(Serap);
          */
+ /* ------------Decorator------------
+
         final EvEsyalari ayna = new CerceveliAyna();
         ayna.produce();
-
+         */
     }
 }
