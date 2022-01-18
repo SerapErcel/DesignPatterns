@@ -5,6 +5,7 @@
  */
 package DesignPatterns;
 
+import DesignPatterns.StructuralDesignPattern.Decorator.*;
 import DesignPatterns.StructuralDesignPattern.Facade.*;
 import DesignPatterns.StructuralDesignPattern.Proxy.*;
 
@@ -108,10 +109,13 @@ public class Main {
          CreditCardFacade creditCardFacade =new CreditCardFacade();
          creditCardFacade.createCreditCart(serap);
          */
- 
- Person Serap = new Person("11111111111", "Elaz??/Keban xxx-yyy-zzz");
- AuthenticatableMaskOrderProxy orderableMask = new AuthenticatableMaskOrderProxy();
- orderableMask.createOrder(Serap);
- 
+ /* ------------Proxy------------
+        Person Serap = new Person("11111111111", "Elaz??/Keban xxx-yyy-zzz");
+        AuthenticatableMaskOrderProxy orderableMask = new AuthenticatableMaskOrderProxy();
+        orderableMask.createOrder(Serap);
+         */
+        final EvEsyalari ayna = new CerceveliAyna();
+        ayna.produce();
+
     }
 }
