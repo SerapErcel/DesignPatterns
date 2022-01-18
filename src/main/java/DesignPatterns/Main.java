@@ -6,6 +6,7 @@
 package DesignPatterns;
 
 import DesignPatterns.StructuralDesignPattern.Facade.*;
+import DesignPatterns.StructuralDesignPattern.Proxy.*;
 
 /*
 import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
@@ -14,7 +15,6 @@ import DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
 import DesignPatterns.CreationalDesignPatterns.Singleton.*;
  */
-
 /**
  *
  * @author SERAP
@@ -103,9 +103,15 @@ public class Main {
         Message emailMessage = new TextMessage(emailMessageSender);
         emailMessage.send();
          */
- 
+ /* ------------Facade------------
          Customer serap =new Customer("Serap","Erçel");
          CreditCardFacade creditCardFacade =new CreditCardFacade();
          creditCardFacade.createCreditCart(serap);
+         */
+ 
+ Person Serap = new Person("11111111111", "Elaz??/Keban xxx-yyy-zzz");
+ AuthenticatableMaskOrderProxy orderableMask = new AuthenticatableMaskOrderProxy();
+ orderableMask.createOrder(Serap);
+ 
     }
 }
