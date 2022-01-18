@@ -4,12 +4,14 @@
  * and open the template in the editor.
  */
 package DesignPatterns;
-
+ /*
 import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
 import DesignPatterns.BehavioralDesignPatterns.Iterator.EmployeeExample.*;
 import DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
 import DesignPatterns.CreationalDesignPatterns.Singleton.*;
+*/
+import DesignPatterns.Structural.Adapter.*;
 
 /**
  *
@@ -81,5 +83,13 @@ public class Main {
             System.out.println(oyuncu.getIsim());
         }  
 */
+  final Musteri musteri = new Musteri("102","aç?klama","Atatürk Mah. Gazi Sok. No:123", "Sancaktepe","?stanbul","Türkiye");
+  final MusteriFaturaAdresiAdaptoru adaptor =new MusteriFaturaAdresiAdaptoru(musteri);
+  final IAdres adres = adaptor;
+  System.out.println("Adres:" + adres.alAcikAdres());
+    System.out.println("Semt:" + adres.alSemt());
+  System.out.println("?ehir:" + adres.alSehir());
+  System.out.println("Ülke:" + adres.alUlke());
+    
     }
 }
