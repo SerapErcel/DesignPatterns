@@ -5,6 +5,8 @@
  */
 package DesignPatterns;
 
+import DesignPatterns.StructuralDesignPattern.Facade.*;
+
 /*
 import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
 import DesignPatterns.BehavioralDesignPatterns.Iterator.EmployeeExample.*;
@@ -12,8 +14,6 @@ import DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
 import DesignPatterns.CreationalDesignPatterns.Singleton.*;
  */
-import DesignPatterns.Structural.Adapter.*;
-import DesignPatterns.Structural.Bridge.*;
 
 /**
  *
@@ -94,6 +94,7 @@ public class Main {
   System.out.println("?ehir:" + adres.alSehir());
   System.out.println("Ülke:" + adres.alUlke());
          */
+ /* ------------Adapter------------
         IMessageSender textMessageSender = new TextMessageSender();
         Message textMessage = new TextMessage(textMessageSender);
         textMessage.send();
@@ -101,5 +102,10 @@ public class Main {
         IMessageSender emailMessageSender = new EmailMessageSender();
         Message emailMessage = new TextMessage(emailMessageSender);
         emailMessage.send();
+         */
+ 
+         Customer serap =new Customer("Serap","Erçel");
+         CreditCardFacade creditCardFacade =new CreditCardFacade();
+         creditCardFacade.createCreditCart(serap);
     }
 }

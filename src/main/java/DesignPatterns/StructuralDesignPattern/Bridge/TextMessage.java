@@ -3,15 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package DesignPatterns.Structural.Bridge;
+package DesignPatterns.StructuralDesignPattern.Bridge;
 
 /**
  *
  * @author SERAP
  */
-public class EmailMessage extends Message {
+public class TextMessage extends Message {
 
-    public EmailMessage(IMessageSender messageSender) {
+    public TextMessage(IMessageSender messageSender) {
         super(messageSender);
     }
 
