@@ -4,14 +4,16 @@
  * and open the template in the editor.
  */
 package DesignPatterns;
- /*
+
+/*
 import DesignPatterns.BehavioralDesignPatterns.Interpreter.*;
 import DesignPatterns.BehavioralDesignPatterns.Iterator.EmployeeExample.*;
 import DesignPatterns.BehavioralDesignPatterns.Iterator.FootballExample.*;
 import DesignPatterns.CreationalDesignPatterns.Factory.*;
 import DesignPatterns.CreationalDesignPatterns.Singleton.*;
-*/
+ */
 import DesignPatterns.Structural.Adapter.*;
+import DesignPatterns.Structural.Bridge.*;
 
 /**
  *
@@ -69,7 +71,7 @@ public class Main {
         }
 
          */
-  /* ------------Iterator/Football------------
+ /* ------------Iterator/Football------------
         final EfesPilsen efesPilsen = new EfesPilsen();
         Iterator it = efesPilsen.getIterator();
         while (it.hasNext()) {
@@ -82,7 +84,8 @@ public class Main {
             final Oyuncu oyuncu = (Oyuncu) it.next();
             System.out.println(oyuncu.getIsim());
         }  
-*/
+         */
+ /* ------------Adapter------------
   final Musteri musteri = new Musteri("102","aç?klama","Atatürk Mah. Gazi Sok. No:123", "Sancaktepe","?stanbul","Türkiye");
   final MusteriFaturaAdresiAdaptoru adaptor =new MusteriFaturaAdresiAdaptoru(musteri);
   final IAdres adres = adaptor;
@@ -90,6 +93,13 @@ public class Main {
     System.out.println("Semt:" + adres.alSemt());
   System.out.println("?ehir:" + adres.alSehir());
   System.out.println("Ülke:" + adres.alUlke());
-    
+         */
+        IMessageSender textMessageSender = new TextMessageSender();
+        Message textMessage = new TextMessage(textMessageSender);
+        textMessage.send();
+
+        IMessageSender emailMessageSender = new EmailMessageSender();
+        Message emailMessage = new TextMessage(emailMessageSender);
+        emailMessage.send();
     }
 }
